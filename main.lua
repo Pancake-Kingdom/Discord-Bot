@@ -8,4 +8,16 @@ client:on('ready', function()
     print('Logged in as '.. client.user.username)
 end)
 
+client:on('messageCreate', function(message)
+    if message.content == 'Moin' then
+        message.channel:send('Moin!')
+    end
+end)
+
+client:on('messageCreate', function(message)
+    if message.content == 'Hallo' then
+        message.channel:send('Hallo!')
+    end
+end)
+
 client:run('Bot Token')
